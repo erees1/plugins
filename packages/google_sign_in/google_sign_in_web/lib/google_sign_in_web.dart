@@ -120,7 +120,7 @@ class GoogleSignInPlugin extends GoogleSignInPlatform {
   @override
   Future<GoogleSignInUserData> signInSilently() async {
     await initialized;
-
+    print('Calling signInSilently in google_sign_in_web');
     return gapiUserToPluginUserData(
         await auth2.getAuthInstance().currentUser.get());
   }
@@ -128,7 +128,7 @@ class GoogleSignInPlugin extends GoogleSignInPlatform {
   @override
   Future<GoogleSignInUserData> signIn() async {
     await initialized;
-
+    print('Calling signIn in google_sign_in_web');
     return gapiUserToPluginUserData(await auth2.getAuthInstance().signIn());
   }
 
