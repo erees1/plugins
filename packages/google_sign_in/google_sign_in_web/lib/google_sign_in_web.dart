@@ -129,7 +129,7 @@ class GoogleSignInPlugin extends GoogleSignInPlatform {
   Future<GoogleSignInUserData> signIn() async {
     await initialized;
     print('Calling signIn in google_sign_in_web');
-    return gapiUserToPluginUserData(await auth2.getAuthInstance().signIn());
+//     return gapiUserToPluginUserData(await auth2.getAuthInstance().signIn());
   }
 
   @override
